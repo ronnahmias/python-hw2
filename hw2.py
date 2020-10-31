@@ -49,12 +49,10 @@ def lagrange_four_square_theorem(num):
             for k in range(int(num ** 0.5) + 1):
                 for m in range(int(num ** 0.5) + 1):
                     if ((i ** 2) + (j ** 2) + (k ** 2) + (m ** 2)) == num:
-                        temp_l = sort_list_min_to_max([i, j, k, m])
-                        if temp_l not in lagrange_list:
-                            lagrange_list.append(temp_l)
-        # for small_list in lagrange_list:
-        #   sort_list(small_list)
-        # lagrange_list = remove_dup_lists(lagrange_list)
+                        lagrange_list.append([i, j, k, m])
+    for small_list in lagrange_list:
+        sort_list_min_to_max(small_list)
+    lagrange_list = remove_dup_lists(lagrange_list)
     lagrange_list = sort_sum_nested_list(lagrange_list)
     return lagrange_list
 
