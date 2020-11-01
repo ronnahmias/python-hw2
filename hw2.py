@@ -84,18 +84,18 @@ def max_number_divide_3(numbers):
     return max_num
 
 
-def odd_range(list):
-    counter = max = 0
-    for i in range(len(list)):
-        if list[i] % 2 != 0:
+def odd_range(num_list):
+    counter = max_range = 0
+    for i in range(len(num_list)):
+        if num_list[i] % 2 != 0:
             if i == 0:
                 counter += 1
-            elif list[i] > list[i - 1]:
+            elif num_list[i] > num_list[i - 1]:
                 counter += 1
             else:
                 counter = 1
         else:
             counter = 0
-        if counter > max:
-            max = counter
-    return max
+        if counter > max_range:
+            max_range = counter
+    return max_range
